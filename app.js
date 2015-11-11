@@ -33,6 +33,8 @@ app.get('/', function(req,res){
         console.log(rows);
         var user_name = rows[0].user_name;
         //res.render('index', {title: 'Express Sample', userData: rows});
+        //sample query
+        //select * from accounts join userInfomation on accounts.user_name=userInfomation.user_name;
         res.render('index', {userData: rows});
     });
     res.render('index', {title: 'Express Sample'});
